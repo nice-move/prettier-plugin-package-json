@@ -58,7 +58,7 @@
     "@nice-move/prettier-plugin-package-json": "link:."
   },
   "engines": {
-    "node": "^12.15.0 || ^14.15.3"
+    "node": "^12.20.0 || ^14.15.3"
   },
   "publishConfig": {
     "access": "public",
