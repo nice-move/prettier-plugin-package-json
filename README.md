@@ -53,3 +53,9 @@ prettier --write **/package.json
 - Merge `bundleDependencies` into `bundledDependencies`
 - Rename `esnext` / `jsnext` to `module`, rename `typings` to `types`
 - Differentiate `UNLICENSED` and `Unlicense` license by `private`
+- Remove leading `./` from `main` / `files[n]`
+- Set `version` when needed
+
+## Related
+
+- [@nice-move/prettier-config](https://github.com/nice-move/nice-move/tree/master/packages/prettier-config)

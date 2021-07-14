@@ -1,17 +1,22 @@
+'use strict';
+
 const test = require('ava').default;
 const { format } = require('prettier');
 
 const original = `{
   "name": "prettier-plugin-package-json",
   "private": true,
-  "version": "0.0.0"
+  "main": "./index.js",
+  "license": "unlicensed"
 }
 `;
 
 const expected = `{
   "private": true,
   "name": "prettier-plugin-package-json",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "main": "index.js"
 }`;
 
 test('Usage', (t) => {
