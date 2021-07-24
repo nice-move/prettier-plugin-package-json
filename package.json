@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/prettier-plugin-package-json",
-  "version": "0.4.7",
+  "version": "0.4.9",
   "description": "A `prettier` plugin to make `package.json` prettier",
   "license": "MIT",
   "author": {
@@ -43,8 +43,8 @@
   "devDependencies": {
     "@nice-move/cli": "^0.5.27",
     "@nice-move/commitlint-config": "^0.1.4",
-    "@nice-move/eslint-config-base": "^0.5.51",
-    "@nice-move/prettier-config": "^0.4.10",
+    "@nice-move/eslint-config-base": "^0.5.52",
+    "@nice-move/prettier-config": "^0.4.12",
     "ava": "^3.15.0",
     "commitlint": "^12.1.4",
     "eslint": "^7.31.0",

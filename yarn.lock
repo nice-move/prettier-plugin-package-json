@@ -407,10 +407,10 @@
   dependencies:
     "@commitlint/config-conventional" "^12.1.4"
 
-"@nice-move/eslint-config-base@^0.5.51":
-  version "0.5.51"
-  resolved "https://registry.yarnpkg.com/@nice-move/eslint-config-base/-/eslint-config-base-0.5.51.tgz#14e9f7ea34aa798b1da0eaccc367b4d2273ea71d"
-  integrity sha512-q54qmqEgnqviy+SSz6xIGzv2PpCuDFDmz3b2KExfPTyF4BvAJMu8pR9sHUoWu+iVHlh0UCmCFD1PjsvvR14kUw==
+"@nice-move/eslint-config-base@^0.5.52":
+  version "0.5.52"
+  resolved "https://registry.yarnpkg.com/@nice-move/eslint-config-base/-/eslint-config-base-0.5.52.tgz#fd146a127f2af4a501445b66bde91f9212103347"
+  integrity sha512-+8cPd0rScUsBHQW5msuXhUNlC/ehW8BtnUQ09vnotzKt5pp62NSg9Y9Th3gwRF/b8xVn3S5DaTH47aoWhLZjrg==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.28.4"
     "@typescript-eslint/parser" "^4.28.4"
@@ -458,18 +458,18 @@
     stylelint-formatter-pretty "^2.1.1"
     yarn-deduplicate "^3.1.0"
 
-"@nice-move/prettier-config@^0.4.10":
-  version "0.4.10"
-  resolved "https://registry.yarnpkg.com/@nice-move/prettier-config/-/prettier-config-0.4.10.tgz#d639eef74c504e59900311caa341c6f9bdb8b8c3"
-  integrity sha512-1We9H68uDEZJJgeUoZq2fRb1Qhtz9dH/H849tqqB7ZPrlCNl9e9MVkAAXweASpIk0Fzwz4qaokXhOAhvdYFBug==
+"@nice-move/prettier-config@^0.4.12":
+  version "0.4.12"
+  resolved "https://registry.yarnpkg.com/@nice-move/prettier-config/-/prettier-config-0.4.12.tgz#d495d053e7b50a54c042170f8550c8ef33dd6486"
+  integrity sha512-o38kfGSkrF/JZVIxU+AqRpIA5tUBMz0tj1Hkrz0B0CF6opFFxcndURvVgz4kpBYD4uAaik4s0HxEiMKYVnsFXg==
   dependencies:
-    "@nice-move/prettier-plugin-package-json" "^0.4.6"
+    "@nice-move/prettier-plugin-package-json" "^0.4.8"
     "@prettier/plugin-xml" "^1.0.2"
     prettier-plugin-ini "^0.3.1"
     prettier-plugin-ssh-config "^0.0.0"
     prettier-plugin-toml "^0.3.1"
 
-"@nice-move/prettier-plugin-package-json@^0.4.6":
+"@nice-move/prettier-plugin-package-json@^0.4.8":
   version "0.0.0"
   uid ""
 
