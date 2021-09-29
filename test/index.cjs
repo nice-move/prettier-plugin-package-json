@@ -31,6 +31,7 @@ const expected = `{
     "email": "abc@example.com",
     "url": "http://example.com"
   },
+  "keywords": [],
   "repository": {
     "type": "",
     "url": "",
