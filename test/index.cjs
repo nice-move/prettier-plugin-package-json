@@ -5,7 +5,6 @@ const { format } = require('prettier');
 
 const original = `{
   "name": "prettier-plugin-package-json",
-  "private": true,
 
     "author": "abc<abc@example.com>(http://example.com)",
 
@@ -22,10 +21,9 @@ const original = `{
 `;
 
 const expected = `{
-  "private": true,
   "name": "prettier-plugin-package-json",
   "version": "0.0.0",
-  "license": "UNLICENSED",
+  "license": "Unlicense",
   "author": {
     "name": "abc",
     "email": "abc@example.com",

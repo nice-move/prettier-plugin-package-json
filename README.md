@@ -13,7 +13,7 @@ A [prettier] plugin to make `package.json` prettier.
 [github-badge]: https://img.shields.io/npm/l/@nice-move/prettier-plugin-package-json.svg?style=flat-square&colorB=blue&logo=github
 [node-badge]: https://img.shields.io/node/v/@nice-move/prettier-plugin-package-json.svg?style=flat-square&colorB=green&logo=node.js
 
-Read about [npm-package.json](https://docs.npmjs.com/cli/v6/configuring-npm/package-json).
+Read about [npm-package.json](https://docs.npmjs.com/cli/v7/configuring-npm/package-json).
 
 ## Installation
 
@@ -23,7 +23,7 @@ npm install prettier @nice-move/prettier-plugin-package-json --save-dev
 
 ## Usage
 
-```json
+```jsonc
 // .prettierrc.json
 {
   "overrides": [
