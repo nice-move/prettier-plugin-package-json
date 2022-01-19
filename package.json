@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/prettier-plugin-package-json",
-  "version": "0.4.11",
+  "version": "0.4.12",
   "description": "A `prettier` plugin to make `package.json` prettier",
   "license": "MIT",
   "author": {
@@ -9,9 +9,12 @@
   },
   "keywords": [
     "nice-move",
+    "npm",
+    "package",
     "package.json",
     "plugin",
     "prettier",
+    "prettier-plugin",
     "profile",
     "readme",
     "sort"
@@ -41,19 +44,19 @@
     "sort-keys": "^4.2.0"
   },
   "devDependencies": {
-    "@nice-move/cli": "^0.5.30",
-    "@nice-move/commitlint-config": "^0.2.0",
-    "@nice-move/eslint-config-base": "^0.5.65",
-    "@nice-move/prettier-config": "^0.5.0",
-    "ava": "^3.15.0",
-    "commitlint": "^13.2.1",
-    "eslint": "^7.32.0",
-    "eslint-plugin-ava": "^13.1.0",
-    "garou": "^0.2.1",
-    "prettier": "^2.4.1"
+    "@nice-move/cli": "^0.6.0",
+    "@nice-move/commitlint-config": "^0.5.0",
+    "@nice-move/eslint-config-base": "^0.6.0",
+    "@nice-move/prettier-config": "^0.5.1",
+    "ava": "^4.0.1",
+    "commitlint": "^16.0.3",
+    "eslint": "^8.7.0",
+    "eslint-plugin-ava": "^13.2.0",
+    "garou": "^0.3.8",
+    "prettier": "^2.5.1"
   },
   "peerDependencies": {
-    "prettier": "^2.4.1"
+    "prettier": "^2.5.1"
   },
   "resolutions": {
     "@nice-move/prettier-plugin-package-json": "link:."
