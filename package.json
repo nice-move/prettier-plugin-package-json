@@ -32,31 +32,29 @@
     "lib"
   ],
   "scripts": {
-    "lint": "nice-move lint",
-    "prepare": "git config core.hooksPath .hooks",
-    "prepublishOnly": "npm run lint && npm test",
+    "lint:staged": "nice-move lint staged",
+    "prepare": "git config core.hooksPath .githooks",
+    "prepublishOnly": "npm run lint:staged && npm test",
     "test": "ava --fail-fast"
   },
   "dependencies": {
     "normalize-package-data": "^3.0.3",
     "npm-normalize-package-bin": "^1.0.1",
-    "prettier-package-json": "^2.6.0",
+    "prettier-package-json": "^2.6.3",
     "sort-keys": "^4.2.0"
   },
   "devDependencies": {
-    "@nice-move/cli": "^0.6.0",
-    "@nice-move/commitlint-config": "^0.5.0",
-    "@nice-move/eslint-config-base": "^0.6.0",
-    "@nice-move/prettier-config": "^0.5.1",
-    "ava": "^4.0.1",
-    "commitlint": "^16.0.3",
-    "eslint": "^8.7.0",
+    "@nice-move/cli": "^0.7.0",
+    "@nice-move/eslint-config-base": "^0.6.3",
+    "@nice-move/prettier-config": "^0.5.2",
+    "ava": "^4.1.0",
+    "eslint": "^8.11.0",
     "eslint-plugin-ava": "^13.2.0",
-    "garou": "^0.3.8",
-    "prettier": "^2.5.1"
+    "garou": "^0.4.3",
+    "prettier": "^2.6.0"
   },
   "peerDependencies": {
-    "prettier": "^2.5.1"
+    "prettier": "^2.6.0"
   },
   "resolutions": {
     "@nice-move/prettier-plugin-package-json": "link:."
@@ -67,9 +65,6 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  },
-  "commitlint": {
-    "extends": "@nice-move/commitlint-config"
   },
   "eslintConfig": {
     "extends": "@nice-move/eslint-config-base"
