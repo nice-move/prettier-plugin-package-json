@@ -1,7 +1,13 @@
-'use strict';
+// eslint-disable-next-line import/no-unresolved
+import test from 'ava';
+import prettier from 'prettier';
 
-const test = require('ava').default;
-const { format } = require('prettier');
+function formatter(code) {
+  return prettier.format(code, {
+    plugin: ['.'],
+    parser: 'package-json',
+  });
+}
 
 const original = `{
   "name": "prettier-plugin-package-json",
@@ -47,10 +53,19 @@ const expected = `{
 }`;
 
 test('Usage', (t) => {
-  const actual = format(original, {
-    plugin: ['.'],
-    parser: 'package-json',
-  });
+  const actual = formatter(original);
 
   t.is(actual, expected);
+});
+
+test('Empty', (t) => {
+  const actual = formatter('{}');
+
+  const minimal = `{
+  "name": "",
+  "version": "0.0.0",
+  "keywords": []
+}`;
+
+  t.is(actual, minimal);
 });

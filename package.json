@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/prettier-plugin-package-json",
-  "version": "0.4.12",
+  "version": "0.5.1",
   "description": "A `prettier` plugin to make `package.json` prettier",
   "license": "MIT",
   "author": {
@@ -27,34 +27,35 @@
   "bugs": {
     "url": "https://github.com/nice-move/prettier-plugin-package-json/issues"
   },
-  "main": "lib/index.cjs",
-  "files": [
-    "lib"
-  ],
+  "main": "dist/index.cjs",
+  "files": [],
   "scripts": {
+    "build": "best-shot prod",
     "lint:staged": "nice-move lint staged",
     "prepare": "git config core.hooksPath .githooks",
     "prepublishOnly": "npm run lint:staged && npm test",
+    "pretest": "npm run build",
     "test": "ava --fail-fast"
   },
-  "dependencies": {
-    "normalize-package-data": "^3.0.3",
-    "npm-normalize-package-bin": "^1.0.1",
-    "prettier-package-json": "^2.6.3",
-    "sort-keys": "^4.2.0"
-  },
   "devDependencies": {
+    "@best-shot/cli": "^0.12.4",
+    "@best-shot/core": "^0.6.6",
     "@nice-move/cli": "^0.7.0",
     "@nice-move/eslint-config-base": "^0.6.3",
     "@nice-move/prettier-config": "^0.5.2",
     "ava": "^4.1.0",
     "eslint": "^8.11.0",
     "eslint-plugin-ava": "^13.2.0",
-    "garou": "^0.4.3",
-    "prettier": "^2.6.0"
+    "garou": "^0.4.4",
+    "normalize-package-data": "^4.0.0",
+    "npm-normalize-package-bin": "^1.0.1",
+    "prettier": "~2.5.0",
+    "prettier-package-json": "^2.6.3",
+    "sort-keys": "^5.0.0",
+    "webpack": "^5.70.0"
   },
   "peerDependencies": {
-    "prettier": "^2.6.0"
+    "prettier": "^2.5.0"
   },
   "resolutions": {
     "@nice-move/prettier-plugin-package-json": "link:."
@@ -67,7 +68,18 @@
     "registry": "https://registry.npmjs.org/"
   },
   "eslintConfig": {
-    "extends": "@nice-move/eslint-config-base"
+    "extends": "@nice-move/eslint-config-base",
+    "rules": {
+      "ava/no-ignored-test-files": [
+        "error",
+        {
+          "files": [
+            "test/*.mjs"
+          ]
+        }
+      ],
+      "import/no-extraneous-dependencies": 0
+    }
   },
   "prettier": "@nice-move/prettier-config"
 }

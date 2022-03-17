@@ -1,10 +1,9 @@
-'use strict';
+import normalizeData from 'normalize-package-data';
+import normalizeBin from 'npm-normalize-package-bin';
+import { format } from 'prettier-package-json';
+import sortKeys from 'sort-keys';
 
-const normalizeData = require('normalize-package-data');
-const normalizeBin = require('npm-normalize-package-bin');
-const { format } = require('prettier-package-json');
-const sortKeys = require('sort-keys');
-const { keyOrder } = require('./key-order.cjs');
+import { keyOrder } from './key-order.mjs';
 
 function mergeArray(bundledDependencies, bundleDependencies) {
   return bundledDependencies || bundleDependencies
@@ -52,16 +51,12 @@ function sort(object) {
   return sortKeys(object, { deep: true });
 }
 
-function normalize(text) {
+export function normalize(text) {
   const io = sort(normalizeBin(handle(JSON.parse(text))));
 
-  if (io.name) {
-    io.name = io.name.trim();
-  }
+  io.name = io.name ? io.name.trim() : '';
 
-  if (io.version) {
-    io.version = io.version.trim();
-  }
+  io.version = io.version ? io.version.trim() : '0.0.0';
 
   if (io.description) {
     io.description = io.description
@@ -95,12 +90,16 @@ function normalize(text) {
     );
   }
 
-  if (!io.version) {
-    io.version = '0.0.0';
-  }
-
   if (!io.keywords && !io.private) {
     io.keywords = [];
+  }
+
+  if (io.keywords && io.keywords.length > 0) {
+    io.keywords = [...new Set(io.keywords)];
+  }
+
+  if (io.files && io.files.length > 0) {
+    io.files = [...new Set(io.files)];
   }
 
   if (io.main && io.main.startsWith('./')) {
@@ -152,5 +151,3 @@ function normalize(text) {
 
   return format(io, { expandUsers: true, keyOrder });
 }
-
-module.exports = { normalize };
