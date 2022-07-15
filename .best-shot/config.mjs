@@ -7,9 +7,6 @@ export const config = {
   },
   output: {
     path: 'dist',
-    library: {
-      type: 'commonjs2',
-    },
   },
   resolve: {
     alias: {
@@ -17,6 +14,6 @@ export const config = {
     },
   },
   externals: {
-    'prettier/parser-babel.js': 'commonjs2 prettier/parser-babel.js',
+    'prettier/parser-babel.js': 'node-commonjs prettier/parser-babel.js',
   },
 };

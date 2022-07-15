@@ -2,9 +2,11 @@
 import test from 'ava';
 import prettier from 'prettier';
 
+const plugin = await import('../dist/index.cjs');
+
 function formatter(code) {
   return prettier.format(code, {
-    plugin: ['.'],
+    plugins: [plugin.default],
     parser: 'package-json',
   });
 }
