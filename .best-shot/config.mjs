@@ -1,7 +1,7 @@
 import { resolve } from 'path';
 
 export const config = {
-  target: 'node12',
+  target: 'node16',
   entry: {
     index: './src/index.mjs',
   },

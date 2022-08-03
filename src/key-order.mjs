@@ -61,7 +61,6 @@ export const keyOrder = [
   'peerDependencies',
   'peerDependenciesMeta',
   'acceptDependencies',
-  'extensionDependencies',
 
   'overrides',
   'resolutions',
@@ -73,6 +72,7 @@ export const keyOrder = [
   'publishConfig',
 
   'languageName',
+  'packageManager',
   'installConfig',
   'preferUnplugged',
 
@@ -82,7 +82,13 @@ export const keyOrder = [
   'displayName',
   'categories',
   'contributes',
+  'activationEvents',
+  'badges',
+  'extensionDependencies',
+  'extensionKind',
   'extensionPack',
+  'galleryBanner',
   'icon',
+  'markdown',
   'qna',
 ];
