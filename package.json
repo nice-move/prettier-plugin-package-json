@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/prettier-plugin-package-json",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "A `prettier` plugin to make `package.json` prettier",
   "license": "MIT",
   "author": {

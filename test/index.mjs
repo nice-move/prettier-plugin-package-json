@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
 import test from 'ava';
 import prettier from 'prettier';
 
@@ -17,9 +16,10 @@ const original = `{
     "author": "abc<abc@example.com>(http://example.com)",
 
   "main": "./index.js",
-  "typings":"",
+  "typings":"","keywords":["o","c"],
   "preferGlobal": false,
-  "license": "unlicensed",
+  "license": "unlicensed",  "workspaces":["ff/*","ff/*","a/*"],
+  "files":["l","l","a"],
 "repository":{
   "url": "","directory":"m","type": ""
 },"resolutions":{
@@ -28,46 +28,14 @@ const original = `{
 }
 `;
 
-const expected = `{
-  "name": "prettier-plugin-package-json",
-  "version": "0.0.0",
-  "license": "Unlicense",
-  "author": {
-    "name": "abc",
-    "email": "abc@example.com",
-    "url": "http://example.com"
-  },
-  "keywords": [],
-  "repository": {
-    "type": "",
-    "url": "",
-    "directory": "m"
-  },
-  "types": "",
-  "main": "index.js",
-  "resolutions": {
-    "a": "",
-    "b": ""
-  },
-  "engines": {
-    "node": "d || <5"
-  }
-}`;
-
 test('Usage', (t) => {
   const actual = formatter(original);
 
-  t.is(actual, expected);
+  t.snapshot(actual);
 });
 
 test('Empty', (t) => {
   const actual = formatter('{}');
 
-  const minimal = `{
-  "name": "",
-  "version": "0.0.0",
-  "keywords": []
-}`;
-
-  t.is(actual, minimal);
+  t.snapshot(actual);
 });

@@ -102,6 +102,22 @@ export function normalize(text) {
     io.files = [...new Set(io.files)];
   }
 
+  if (
+    io.workspaces &&
+    Array.isArray(io.workspaces) &&
+    io.workspaces.length > 0
+  ) {
+    io.workspaces = [...new Set(io.workspaces)].sort();
+  }
+
+  if (io.workspaces?.packages && io.workspaces.packages.length > 0) {
+    io.workspaces.packages = [...new Set(io.workspaces.packages)].sort();
+  }
+
+  if (io.workspaces?.nohoist && io.workspaces.nohoist.length > 0) {
+    io.workspaces.nohoist = [...new Set(io.workspaces.nohoist)].sort();
+  }
+
   if (io.main && io.main.startsWith('./')) {
     io.main = io.main.replace(/^\.\//, '');
   }
