@@ -11,20 +11,20 @@ function formatter(code) {
 }
 
 const original = `{
-  "name": "prettier-plugin-package-json",
+  "name": "prettier-plugin-package-json ",
 
     "author": "abc<abc@example.com>(http://example.com)",
 
   "main": "./index.js",
   "typings":"","keywords":["o","c"],
   "preferGlobal": false,
-  "license": "unlicensed",  "workspaces":["ff/*","ff/*","a/*"],
-  "files":["l","l","a"],
+  "license": "unlicensed ",  "workspaces":["ff/*","ff/*","a/*"],
+  "files":["l","l","a"],"version"          :"   ",
 "repository":{
   "url": "","directory":"m","type": ""
 },"resolutions":{
   "b":"","a":""
-},"engines":{"node":"d ||    < 5"}
+},"engines":{"node":"d ||    < 5","npm":"  4|| >  8"}
 }
 `;
 

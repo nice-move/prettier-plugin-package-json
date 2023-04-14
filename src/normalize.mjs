@@ -51,12 +51,20 @@ function sort(object) {
   return sortKeys(object, { deep: true });
 }
 
+function trimVersion(version) {
+  return version
+    .split('||')
+    .sort()
+    .map((item) => item.trim().replace(/\s+/g, ' '))
+    .join(' || ');
+}
+
 export function normalize(text) {
   const io = sort(normalizeBin(handle(JSON.parse(text))));
 
   io.name = io.name ? io.name.trim() : '';
 
-  io.version = io.version ? io.version.trim() : '0.0.0';
+  io.version = io.version ? io.version.trim() || '0.0.0' : '0.0.0';
 
   if (io.description) {
     io.description = io.description
@@ -157,12 +165,18 @@ export function normalize(text) {
     io.homepage = io.homepage.replace(/#readme$/, '');
   }
 
-  if (io.engines && io.engines.node) {
-    io.engines.node = io.engines.node
-      .split('||')
-      .map((item) => item.replace(/\s/g, ''))
-      .join(' || ')
-      .replace(/\s+/g, ' ');
+  if (io.engines) {
+    if (io.engines.vscode) {
+      io.engines.vscode = trimVersion(io.engines.vscode);
+    }
+
+    if (io.engines.node) {
+      io.engines.node = trimVersion(io.engines.node);
+    }
+
+    if (io.engines.npm) {
+      io.engines.npm = trimVersion(io.engines.npm);
+    }
   }
 
   return format(io, { expandUsers: true, keyOrder });
