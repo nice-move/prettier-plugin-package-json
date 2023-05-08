@@ -24,7 +24,7 @@ const original = `{
   "url": "","directory":"m","type": ""
 },"resolutions":{
   "b":"","a":""
-},"engines":{"node":"d ||    < 5","npm":"  4|| >  8"}
+},"engines":{"node":"d || ^7||   ^4 ||   < 5","npm":"  4|| >  8"}
 }
 `;
 

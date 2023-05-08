@@ -54,8 +54,8 @@ function sort(object) {
 function trimVersion(version) {
   return version
     .split('||')
-    .sort()
     .map((item) => item.trim().replace(/\s+/g, ' '))
+    .sort()
     .join(' || ');
 }
 
