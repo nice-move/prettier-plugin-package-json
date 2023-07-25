@@ -1,13 +1,15 @@
 import test from 'ava';
-import prettier from 'prettier';
+import { format } from 'prettier';
 
 const plugin = await import('../dist/index.cjs');
 
-function formatter(code) {
-  return prettier.format(code, {
+async function formatter(t, code) {
+  const output = await format(code, {
     plugins: [plugin.default],
     parser: 'package-json',
   });
+
+  t.snapshot(output);
 }
 
 const original = `{
@@ -28,14 +30,6 @@ const original = `{
 }
 `;
 
-test('Usage', (t) => {
-  const actual = formatter(original);
+test('Usage', formatter, original);
 
-  t.snapshot(actual);
-});
-
-test('Empty', (t) => {
-  const actual = formatter('{}');
-
-  t.snapshot(actual);
-});
+test('Empty', formatter, '{}');

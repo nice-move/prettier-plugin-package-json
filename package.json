@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/prettier-plugin-package-json",
-  "version": "0.7.3",
+  "version": "0.7.5",
   "description": "A `prettier` plugin to make `package.json` prettier",
   "license": "MIT",
   "author": {
@@ -39,26 +39,26 @@
     "test": "ava --fail-fast"
   },
   "devDependencies": {
-    "@bring-it/npm": "^0.1.1",
-    "@nice-move/cli": "^0.10.8",
-    "@nice-move/eslint-config-base": "^0.9.9",
-    "@nice-move/prettier-config": "^0.8.0",
-    "ava": "^5.2.0",
-    "best-shot": "^0.3.2",
-    "eslint": "^8.40.0",
+    "@bring-it/npm": "^0.2.10",
+    "@nice-move/cli": "^0.10.11",
+    "@nice-move/eslint-config-base": "^0.9.17",
+    "@nice-move/prettier-config": "^0.9.0",
+    "ava": "^5.3.1",
+    "best-shot": "^0.4.1",
+    "eslint": "^8.45.0",
     "eslint-plugin-ava": "^14.0.0",
-    "garou": "^0.6.6",
+    "garou": "^0.6.12",
     "normalize-package-data": "^5.0.0",
     "npm-normalize-package-bin": "^3.0.1",
-    "prettier": "~2.8.8",
+    "prettier": "~3.0.0",
     "prettier-package-json": "^2.8.0",
     "sort-keys": "^5.0.0"
   },
   "peerDependencies": {
-    "prettier": "^2.8.8"
+    "prettier": "^2.8.8 || ^3"
   },
   "engines": {
-    "node": "^16.15.0 || ^18.12.0 || >=19.0.0"
+    "node": ">=19.0.0 || ^16.15.0 || ^18.12.0"
   },
   "publishConfig": {
     "access": "public",
