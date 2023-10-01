@@ -33,29 +33,29 @@
     "build": "best-shot prod",
     "lint:staged": "nice-move lint staged",
     "prepare": "nice-move git hooks",
-    "prepublishOnly": "npm run lint:staged && npm test",
-    "snapshot": "ava --fail-fast --u",
-    "pretest": "npm run build",
+    "prepublishOnly": "pnpm run lint:staged && pnpm test",
+    "snapshot": "ava --fail-fast -u",
+    "pretest": "pnpm run build",
     "test": "ava --fail-fast"
   },
   "devDependencies": {
-    "@bring-it/npm": "^0.2.10",
+    "@bring-it/npm": "^0.3.4",
     "@nice-move/cli": "^0.10.11",
-    "@nice-move/eslint-config-base": "^0.9.17",
-    "@nice-move/prettier-config": "^0.9.0",
+    "@nice-move/eslint-config-base": "^0.9.20",
+    "@nice-move/prettier-config": "^0.9.6",
     "ava": "^5.3.1",
-    "best-shot": "^0.4.1",
-    "eslint": "^8.45.0",
+    "best-shot": "^0.4.2",
+    "eslint": "^8.50.0",
     "eslint-plugin-ava": "^14.0.0",
-    "garou": "^0.6.12",
-    "normalize-package-data": "^5.0.0",
+    "garou": "^0.6.14",
+    "normalize-package-data": "^6.0.0",
     "npm-normalize-package-bin": "^3.0.1",
-    "prettier": "~3.0.0",
+    "prettier": "~3.0.3",
     "prettier-package-json": "^2.8.0",
     "sort-keys": "^5.0.0"
   },
   "peerDependencies": {
-    "prettier": "^2.8.8 || ^3"
+    "prettier": "^2.8.8 || ^3.0.3"
   },
   "engines": {
     "node": ">=19.0.0 || ^16.15.0 || ^18.12.0"
@@ -64,13 +64,15 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "packageManager": "pnpm@8.8.0",
   "eslintConfig": {
     "extends": "@nice-move/eslint-config-base"
   },
   "nice-move": {
     "bundle": [
       "src/**"
-    ]
+    ],
+    "import-groups": "nice-move-preset"
   },
   "prettier": "@nice-move/prettier-config"
 }
