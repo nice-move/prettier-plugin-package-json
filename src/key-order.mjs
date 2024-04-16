@@ -64,7 +64,8 @@ export const keyOrder = [
 
   'overrides',
   'resolutions',
-
+  'pnpm',
+  'packageManager',
   'engines',
   'os',
   'cpu',
@@ -72,11 +73,8 @@ export const keyOrder = [
   'publishConfig',
 
   'languageName',
-  'packageManager',
   'installConfig',
   'preferUnplugged',
-
-  'pnpm',
 
   // vscode spec
   'displayName',
