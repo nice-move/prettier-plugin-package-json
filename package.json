@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/prettier-plugin-package-json",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "A `prettier` plugin to make `package.json` prettier",
   "license": "MIT",
   "author": {
@@ -27,7 +27,8 @@
   "bugs": {
     "url": "https://github.com/nice-move/prettier-plugin-package-json/issues"
   },
-  "main": "dist/index.cjs",
+  "type": "module",
+  "main": "dist/index.mjs",
   "files": [],
   "scripts": {
     "build": "best-shot prod",
@@ -39,40 +40,39 @@
     "test": "ava --fail-fast"
   },
   "devDependencies": {
-    "@bring-it/npm": "^0.5.2",
-    "@nice-move/cli": "^0.11.9",
-    "@nice-move/eslint-config-base": "^0.11.3",
-    "@nice-move/prettier-config": "^0.11.1",
-    "ava": "^6.1.2",
-    "best-shot": "^0.5.2",
-    "eslint": "^8.57.0",
+    "@bring-it/cli": "^0.9.9",
+    "@bring-it/npm": "^0.5.9",
+    "@nice-move/all-in-base": "^0.2.11",
+    "ava": "^6.2.0",
+    "best-shot": "^0.7.8",
+    "eslint": "^8.57.1",
     "eslint-plugin-ava": "^14.0.0",
-    "garou": "^0.7.3",
-    "normalize-package-data": "^6.0.0",
-    "npm-normalize-package-bin": "^3.0.1",
-    "prettier": "~3.2.5",
+    "garou": "^0.8.2",
+    "normalize-package-data": "^7.0.0",
+    "npm-normalize-package-bin": "^4.0.0",
+    "prettier": "~3.3.3",
     "prettier-package-json": "^2.8.0",
-    "sort-keys": "^5.0.0"
+    "sort-keys": "^5.1.0",
+    "typescript": "^5.6.3"
   },
   "peerDependencies": {
-    "prettier": "^3.2.5"
+    "prettier": "^3.3.3"
   },
+  "packageManager": "pnpm@9.14.2",
   "engines": {
-    "node": ">=20.0.0 || ^18.12.0"
+    "node": ">=22.11.0 || ^20.5.0"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "packageManager": "pnpm@8.15.7",
   "eslintConfig": {
     "extends": "@nice-move/eslint-config-base"
   },
   "nice-move": {
     "bundle": [
       "src/**"
-    ],
-    "import-groups": "nice-move-preset"
+    ]
   },
   "prettier": "@nice-move/prettier-config"
 }

@@ -1,12 +1,16 @@
 import { resolve } from 'node:path';
 
 export const config = {
-  target: 'node16',
+  target: 'node18',
   entry: {
     index: './src/index.mjs',
   },
   output: {
     path: 'dist',
+    module: true,
+    library: {
+      type: 'module',
+    },
   },
   resolve: {
     alias: {

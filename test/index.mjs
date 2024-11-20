@@ -1,11 +1,11 @@
 import test from 'ava';
 import { format } from 'prettier';
 
-const plugin = await import('../dist/index.cjs');
+import * as plugin from '../dist/index.mjs';
 
 async function formatter(t, code) {
   const output = await format(code, {
-    plugins: [plugin.default],
+    plugins: [plugin],
     parser: 'package-json',
   });
 
