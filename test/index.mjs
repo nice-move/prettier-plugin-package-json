@@ -22,12 +22,10 @@ const original = `{
   "preferGlobal": false,
   "license": "unlicensed ",  "workspaces":["ff/*","ff/*","a/*"],
   "files":["l","l","a"],"version"          :"   ",
-"repository":{
-  "url": "","directory":"m","type": ""
-},"resolutions":{
+"resolutions":{
   "b":"","a":""
 },"engines":{"node":"d || ^7||   ^4 ||   < 5","npm":"  4|| >  8"}
-}
+,"repository":"https://github.com/nice-move/prettier-plugin-package-json.git"}
 `;
 
 test('Usage', formatter, original);

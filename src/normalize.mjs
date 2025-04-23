@@ -88,7 +88,6 @@ export function normalize(text) {
 
   if (haveGit(io)) {
     io.repository.type = 'git';
-    io.repository.url = io.repository.url.replace(/^git\+/, '');
   }
 
   if (io.repository && io.repository.directory) {
@@ -162,9 +161,11 @@ export function normalize(text) {
   }
 
   if (io.homepage && io.homepage.endsWith('#readme')) {
-    io.homepage = io.homepage.replace(/#readme$/, '');
+    io.homepage = io.homepage.replace(/#readme$/, '')
   }
-
+  if (io.homepage) {
+io.homepage = io.homepage.replace(/^git\+/, '');
+  }
   if (io.engines) {
     if (io.engines.vscode) {
       io.engines.vscode = trimVersion(io.engines.vscode);

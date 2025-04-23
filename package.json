@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/prettier-plugin-package-json",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "A `prettier` plugin to make `package.json` prettier",
   "license": "MIT",
   "author": {
@@ -40,34 +40,31 @@
     "test": "ava --fail-fast"
   },
   "devDependencies": {
-    "@bring-it/cli": "^0.9.9",
-    "@bring-it/npm": "^0.5.9",
-    "@nice-move/all-in-base": "^0.2.11",
+    "@bring-it/cli": "^0.10.0",
+    "@bring-it/npm": "^0.6.0",
+    "@nice-move/all-in-base": "^0.4.21",
     "ava": "^6.2.0",
-    "best-shot": "^0.7.8",
-    "eslint": "^8.57.1",
-    "eslint-plugin-ava": "^14.0.0",
-    "garou": "^0.8.2",
+    "best-shot": "^0.9.12",
+    "eslint": "^9.25.1",
+    "eslint-plugin-ava": "^15.0.1",
+    "garou": "^0.9.5",
     "normalize-package-data": "^7.0.0",
     "npm-normalize-package-bin": "^4.0.0",
-    "prettier": "~3.3.3",
+    "prettier": "~3.5.3",
     "prettier-package-json": "^2.8.0",
     "sort-keys": "^5.1.0",
-    "typescript": "^5.6.3"
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "prettier": "^3.3.3"
+    "prettier": "^3.5.3"
   },
-  "packageManager": "pnpm@9.14.2",
+  "packageManager": "pnpm@10.9.0",
   "engines": {
     "node": ">=22.11.0 || ^20.5.0"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  },
-  "eslintConfig": {
-    "extends": "@nice-move/eslint-config-base"
   },
   "nice-move": {
     "bundle": [
