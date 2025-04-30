@@ -19,8 +19,8 @@ export const config = {
   },
   externals: {
     'prettier/parser-babel.js': 'node-commonjs prettier/parser-babel.js',
-    'spdx-license-ids/deprecated': 'node-commonjs spdx-license-ids/deprecated',
-    'spdx-license-ids': 'node-commonjs spdx-license-ids',
-    'spdx-exceptions': 'node-commonjs spdx-exceptions'
+  },
+  chain(chain) {
+    chain.resolve.extensions.add('.json');
   },
 };

@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/prettier-plugin-package-json",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "A `prettier` plugin to make `package.json` prettier",
   "license": "MIT",
   "author": {
@@ -22,14 +22,14 @@
   "homepage": "https://github.com/nice-move/prettier-plugin-package-json",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nice-move/prettier-plugin-package-json.git"
+    "url": "git+https://github.com/nice-move/prettier-plugin-package-json.git"
   },
   "bugs": {
     "url": "https://github.com/nice-move/prettier-plugin-package-json/issues"
   },
-  "type": "module",
   "main": "dist/index.mjs",
   "files": [],
+  "type": "module",
   "scripts": {
     "build": "best-shot prod",
     "lint:staged": "nice-move lint staged",
@@ -42,7 +42,7 @@
   "devDependencies": {
     "@bring-it/cli": "^0.10.0",
     "@bring-it/npm": "^0.6.0",
-    "@nice-move/all-in-base": "^0.4.21",
+    "@nice-move/all-in-base": "^0.4.23",
     "ava": "^6.2.0",
     "best-shot": "^0.9.12",
     "eslint": "^9.25.1",
@@ -58,9 +58,10 @@
   "peerDependencies": {
     "prettier": "^3.5.3"
   },
-  "packageManager": "pnpm@10.9.0",
+  "packageManager": "pnpm@10.10.0",
   "engines": {
-    "node": ">=22.11.0 || ^20.5.0"
+    "node": ">=22.11.0 || ^20.5.0",
+    "pnpm": ">=10.10.0"
   },
   "publishConfig": {
     "access": "public",
